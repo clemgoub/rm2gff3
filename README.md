@@ -5,4 +5,4 @@
 - **Orders**:LINE, SINE, DNA, LTR, RC, Low_complexity, Satellite and Simple_repeat will be colored
 - All others Classes/Order will be colored in light grey
 - Colors can be changed using HTML RGB syntax *e.g.: #3399ff*
-- The script will parse any .out file regarding the format of the TE header, beware that in that case the coloring may be incosistent
+- The script will parse any .out file regarding the format of the TE header, beware that in that case the coloring may be inconsistent
