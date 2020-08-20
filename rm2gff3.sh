@@ -27,7 +27,7 @@ echo "USAGE: \./rm2gff3\.sh RM\.out"
 else 
 
 #awk 'NR > 3 {print $5"\tRepeatMasker-4\.0\.1\tsimilarity\t"$6"\t"$7"\t"$1"\t"$9"\t\.\tTarget="$10" "$11" "$12" "$13" "$14";Div="$2";Del="$3";Ind="$4}' $1 |\
-awk 'NR > 3 {print $5"\tRepeatMasker-4\.0\.1\tsimilarity\t"$6"\t"$7"\t"$1"\t"$9"\t\.\tTarget="$10" "$11" "$12" "$13" "$14"\tDiv="$2";Del="$3";Ind="$4";SWscore="$1}' $1 |\
+awk 'NR > 3 {print $5"\tRepeatMasker-4\.0\.1\tsimilarity\t"$6"\t"$7"\t"$1"\t"$9"\t\.\tTarget="$10" "$11" "$12" "$13" "$14"\tDiv="$2";Del="$3";Ins="$4";SWscore="$1}' $1 |\
 sed 's/\tC\t/\t-\t/g' |\
 awk '{if ($7 == "+") {print $1"\t"$2"\t"$3"\t"$4"\t"$5"\t"$6"\t"$7"\t"$8"\t"$9" "$10" "$11" "$12";"$NF} else {print $1"\t"$2"\t"$3"\t"$4"\t"$5"\t"$6"\t"$7"\t"$8"\t"$9" "$10" "$13" "$12";"$NF}}' |\
 awk -v LINEcol="#3399ff" \
